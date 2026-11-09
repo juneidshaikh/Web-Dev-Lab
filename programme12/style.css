@@ -1,0 +1,112 @@
+/* Reset and Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a; /* Slate 900 background */
+    color: #f8fafc;
+    padding: 2rem;
+}
+
+.showcase-wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.showcase-head {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.showcase-head h1 {
+    font-size: 2.5rem;
+    color: #10b981; /* Emerald green accent */
+}
+
+/* 
+   ADVANCED CSS GRID (Bento Box Style)
+*/
+.bento-grid-layout {
+    display: grid;
+    /* Creates a responsive grid where columns automatically fit */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Forces grid rows to be exactly 160px tall */
+    grid-auto-rows: 160px; 
+    gap: 1.5rem;
+}
+
+/* Base Card Styling */
+.bento-card {
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Pushes text to the bottom of the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.bento-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+}
+
+.bento-card h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.bento-card p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* 
+   GRID SPANNING CAPABILITIES
+*/
+/* Forces this item to take up 2 columns horizontally */
+.span-col-2 {
+    grid-column: span 2;
+}
+
+/* Forces this item to take up 2 rows vertically */
+.span-row-2 {
+    grid-row: span 2;
+}
+
+/* Card Gradient Themes */
+.deep-emerald {
+    background: linear-gradient(135deg, #064e3b, #047857);
+}
+
+.slate-dark {
+    background: linear-gradient(135deg, #1e293b, #334155);
+}
+
+.slate-light {
+    background: linear-gradient(135deg, #334155, #475569);
+}
+
+.neon-purple {
+    background: linear-gradient(135deg, #4c1d95, #7c3aed);
+}
+
+/* Responsive adjustments for mobile phones */
+@media (max-width: 600px) {
+    .span-col-2 {
+        grid-column: span 1; /* Disables horizontal spanning on small screens */
+    }
+    
+    .span-row-2 {
+        grid-row: span 1; /* Disables vertical spanning on small screens */
+    }
+    
+    .bento-grid-layout {
+        grid-auto-rows: minmax(150px, auto); /* Allows cards to grow with content */
+    }
+}
