@@ -1,0 +1,169 @@
+/* Base Reset & Dark Theme */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #09090b; /* Very dark background */
+    color: #e4e4e7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures footer stays at the bottom */
+}
+
+/* 
+   1. ADVANCED FLEXBOX HEADER (Glassmorphism)
+*/
+.glass-topbar {
+    display: flex;
+    justify-content: space-between; /* Pushes items to edges */
+    align-items: center; /* Vertically centers items */
+    padding: 1rem 2.5rem;
+    background: rgba(24, 24, 27, 0.6);
+    backdrop-filter: blur(12px); /* Glassmorphism effect */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+}
+
+.topbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex: 1; /* Takes up 1 fraction of space */
+}
+
+.brand-highlight {
+    color: #a855f7; /* Purple accent */
+}
+
+.topbar-menu {
+    display: flex;
+    gap: 2rem;
+    flex: 2; /* Takes up more space to stay centered */
+    justify-content: center;
+}
+
+.topbar-menu a {
+    color: #a1a1aa;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.topbar-menu a:hover {
+    color: #ffffff;
+}
+
+.topbar-action {
+    flex: 1; /* Matches brand width to keep menu perfectly centered */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact-btn {
+    background-color: #a855f7;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.25rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Main Content Area */
+.dummy-content {
+    flex-grow: 1; /* Pushes the footer to the bottom of the screen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.dummy-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.dummy-content p {
+    color: #a1a1aa;
+    max-width: 600px;
+}
+
+/* 
+   2. ADVANCED FLEXBOX FOOTER 
+*/
+.glass-base {
+    background-color: #18181b;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 3rem 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column; /* Stacks top and bottom rows */
+    gap: 3rem;
+}
+
+/* Footer Top Row: Split between brand info and links */
+.base-top-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 2rem;
+}
+
+.base-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.base-info p {
+    color: #a1a1aa;
+}
+
+/* Footer Links: Flexbox inside Flexbox */
+.base-links-group {
+    display: flex;
+    gap: 4rem;
+}
+
+.link-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.link-column h4 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.link-column a {
+    color: #a1a1aa;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* Footer Bottom Row */
+.base-bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.85rem;
+    color: #71717a;
+}
+
+.legal-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.legal-links a {
+    color: #71717a;
+    text-decoration: none;
+}
