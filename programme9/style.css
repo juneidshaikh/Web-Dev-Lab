@@ -1,0 +1,111 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eceff1; /* Blue-grey background */
+    color: #263238;
+}
+
+/* 
+   1. FLEXBOX NAVBAR
+*/
+.arch-header {
+    background-color: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    flex-wrap: wrap; /* Allows wrapping on very small screens */
+    gap: 1rem;
+}
+
+.logo-box {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #37474f;
+}
+
+.arch-nav-menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.arch-nav-menu a {
+    text-decoration: none;
+    color: #546e7a;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.arch-nav-menu a:hover {
+    color: #000000;
+}
+
+/* Section Title */
+.gallery-section {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.section-title h1 {
+    font-size: 2rem;
+    color: #263238;
+}
+
+.section-title p {
+    color: #607d8b;
+    margin-top: 0.5rem;
+}
+
+/* 
+   2. FLEXBOX WRAP GALLERY 
+*/
+.arch-gallery-wrap {
+    display: flex;
+    flex-wrap: wrap; /* This is the key property for the grid effect */
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* Flex item styling */
+.arch-photo-card {
+    /* grow, shrink, basic-width */
+    flex: 1 1 250px; 
+    max-width: 350px; 
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.arch-photo-card:hover {
+    transform: translateY(-5px);
+}
+
+.arch-photo-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-caption {
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+    color: #37474f;
+}
