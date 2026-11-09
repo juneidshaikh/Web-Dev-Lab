@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Trip Adventures - Positioning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Sticky Navbar using Flexbox -->
+    <nav class="sticky-top-nav">
+        <div class="nav-brand">CoastalDrives</div>
+        <ul class="nav-links-flex">
+            <li><a href="#routes">Routes</a></li>
+            <li><a href="#vehicles">Vehicles</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="content-area">
+        <section class="intro-text">
+            <h1>The Ultimate Coastal Expedition</h1>
+            <p>Scroll down to see the sticky navigation bar in action. This page demonstrates CSS positioning for both the navbar and the image overlay card below.</p>
+            <p>We are taking the 5-Door 4x4 from Mangalore straight to the beaches of Goa. The journey is just as important as the destination.</p>
+        </section>
+
+        <!-- Card Overlay using Absolute Positioning -->
+        <section class="overlay-card-wrapper">
+            <!-- Placeholder image for the road trip -->
+            <img src="https://images.unsplash.com/photo-1533558701576-23c65e0272fb?auto=format&fit=crop&w=800&q=80" alt="Coastal Road Trip" class="card-bg-image">
+            
+            <div class="overlay-text-box">
+                <h3>Mangalore to Goa</h3>
+                <p>Cruising the coastal highway</p>
+                <span class="status-badge">Active Route</span>
+            </div>
+        </section>
+        
+        <!-- Extra space to allow scrolling -->
+        <div class="scroll-space">
+            <p>Keep scrolling to test the sticky navbar...</p>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,119 @@
+/* Basic reset */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333;
+}
+
+/* 
+   1. STICKY NAVBAR WITH FLEXBOX 
+   position: sticky keeps it at the top when scrolling
+*/
+.sticky-top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Keeps navbar above other content */
+    background-color: #111827; /* Dark charcoal */
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-brand {
+    color: #f97316; /* Orange accent */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links-flex {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links-flex a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links-flex a:hover {
+    color: #f97316;
+}
+
+/* Layout spacing */
+.content-area {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+.intro-text {
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+/* 
+   2. CARD OVERLAY USING CSS POSITIONING
+   position: relative creates a boundary for absolute children
+*/
+.overlay-card-wrapper {
+    position: relative;
+    max-width: 100%;
+    border-radius: 12px;
+    overflow: hidden; /* Keeps image corners rounded */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.card-bg-image {
+    width: 100%;
+    display: block; /* Removes bottom spacing on images */
+}
+
+/* 
+   position: absolute places the box relative to the wrapper
+*/
+.overlay-text-box {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(17, 24, 39, 0.85); /* Semi-transparent dark */
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #f97316;
+}
+
+.overlay-text-box h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+}
+
+.overlay-text-box p {
+    margin: 0 0 1rem 0;
+    color: #d1d5db;
+}
+
+.status-badge {
+    background-color: #f97316;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 99px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* Extra space to demonstrate the scroll effect */
+.scroll-space {
+    height: 100vh;
+    padding-top: 3rem;
+    color: #9ca3af;
+    text-align: center;
+}
