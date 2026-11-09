@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Algorithm - Grid Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="news-container">
+        <!-- Newspaper Header -->
+        <header class="news-masthead">
+            <h1>The Daily Algorithm</h1>
+            <p class="issue-date">Monday, November 9, 2026 | Vol. 42</p>
+        </header>
+
+        <!-- 3-Column CSS Grid -->
+        <main class="newspaper-grid">
+            <!-- Left Column -->
+            <aside class="side-column">
+                <article class="news-brief">
+                    <h2>AI in Healthcare</h2>
+                    <p>New machine learning models are predicting patient outcomes with 95% accuracy, revolutionizing triage protocols in major city hospitals.</p>
+                </article>
+                <article class="news-brief border-top">
+                    <h2>Quantum Leaps</h2>
+                    <p>Researchers achieve stable qubits at room temperature, bringing commercial quantum computing one step closer to reality.</p>
+                </article>
+            </aside>
+
+            <!-- Center Column (Main Story) -->
+            <section class="main-column">
+                <article class="lead-story">
+                    <h2>Autonomous Vehicles Conquer Unstructured Roads</h2>
+                    <!-- Grayscale image for newspaper feel -->
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=600&q=80" alt="Autonomous tech" class="story-img">
+                    <p><strong>BENGALURU</strong> — In a groundbreaking test, the ZeroCrash adaptive path planning system successfully navigated the chaotic, unstructured roads of urban India.</p>
+                    <p>Using advanced collision avoidance algorithms and real-time sensor fusion, the prototype demonstrated unprecedented agility. Experts believe this framework will set a new global standard for self-driving logic in developing nations.</p>
+                </article>
+            </section>
+
+            <!-- Right Column -->
+            <aside class="side-column">
+                <article class="news-brief">
+                    <h2>Tech Stocks Rally</h2>
+                    <p>Silicon Valley sees a massive surge as AI hardware companies report record-breaking Q3 earnings across the board.</p>
+                </article>
+                <article class="news-brief border-top">
+                    <h2>Next-Gen Web</h2>
+                    <p>Developers are rapidly adopting CSS Grid for complex layouts, leaving older float-based hacks in the dust.</p>
+                </article>
+            </aside>
+        </main>
+    </div>
+</body>
+</html>

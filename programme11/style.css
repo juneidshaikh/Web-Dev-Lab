@@ -1,0 +1,116 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography & Background */
+body {
+    background-color: #fdfbf7; /* Off-white vintage paper color */
+    color: #1a1a1a;
+    font-family: 'Georgia', serif; /* Serif font for newspaper look */
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+.news-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Masthead Styling */
+.news-masthead {
+    text-align: center;
+    border-bottom: 4px solid #1a1a1a;
+    border-top: 4px solid #1a1a1a;
+    padding: 2rem 0 1rem;
+    margin-bottom: 2rem;
+}
+
+.news-masthead h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.issue-date {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #4a4a4a;
+}
+
+/* 
+   CSS GRID LAYOUT (The core of P11)
+*/
+.newspaper-grid {
+    display: grid;
+    /* Creates 3 columns: 1 part left, 2 parts center, 1 part right */
+    grid-template-columns: 1fr 2fr 1fr; 
+    gap: 2rem;
+}
+
+/* Column Borders and Spacing */
+.side-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.main-column {
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    padding: 0 2rem;
+}
+
+/* Article Styling */
+.news-brief h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.news-brief p {
+    font-size: 0.95rem;
+    color: #333333;
+}
+
+.border-top {
+    border-top: 1px solid #cccccc;
+    padding-top: 1.5rem;
+}
+
+/* Lead Story Styling */
+.lead-story h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.story-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    filter: grayscale(100%); /* Makes the image black & white */
+}
+
+/* 
+   Responsive Design for smaller screens (Mobile) 
+*/
+@media (max-width: 900px) {
+    .newspaper-grid {
+        grid-template-columns: 1fr; /* Stacks everything into 1 column */
+    }
+    
+    .main-column {
+        border-left: none;
+        border-right: none;
+        border-top: 2px solid #1a1a1a;
+        border-bottom: 2px solid #1a1a1a;
+        padding: 2rem 0;
+    }
+}
